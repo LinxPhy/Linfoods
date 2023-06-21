@@ -1,10 +1,15 @@
-import { useState } from 'react'
 import Masonry from 'react-masonry-css'
-import Images from './Images'
+import Reference from './Reference';
 import './Masonry.css'
 import './App.css'
 
 function App() {
+
+  const keys = Object.keys(Reference).map(key => Reference[key]);
+
+  const imageElements = keys.map((image, key) => (
+    <Image data={{ image_name: image.name, src: image.src }} key={key} />
+  ));
 
   const breakpointCols = {
     default: 3,
@@ -14,14 +19,12 @@ function App() {
 
   return (
     <div className="container">
-      <Masonry 
+      <Masonry
         breakpointCols={breakpointCols}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        <div className="items">
-          <Images />
-        </div>
+        {imageElements}
       </Masonry>
 
     </div>
@@ -29,5 +32,13 @@ function App() {
 }
 
 
+
+const Image = (props) => {
+  const { image_name, src } = props.data;
+
+  return (
+    <img src={src} alt={image_name} className='image_item'></img>
+  )
+};
 
 export default App
