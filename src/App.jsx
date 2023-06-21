@@ -12,7 +12,7 @@ function App() {
   ));
 
   const breakpointCols = {
-    default: 3,
+    default: 4,
     1100: 2,
     700: 1
   }
@@ -23,6 +23,7 @@ function App() {
         breakpointCols={breakpointCols}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
+        
       >
         {imageElements}
       </Masonry>

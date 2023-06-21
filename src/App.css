@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+:root{
+    --background-colour: #060a1a;
+}
+
+body{
+    background-color: var(--background-colour);
+}
+
+.container{
+    padding: 50px;
+}
+
 .items{
     display: flex;
 }
@@ -11,4 +23,6 @@
 img{
     width: 100%;
     object-fit: contain;
+    margin-bottom: 30px;
+    border: 5px solid #fff;
 }
