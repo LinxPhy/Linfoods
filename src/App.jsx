@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Masonry from 'react-masonry-css'
+import Images from './Images'
 import './Masonry.css'
 import './App.css'
-import Reference from './Reference'
 
 function App() {
 
@@ -19,21 +19,15 @@ function App() {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        <div className="item">
-          <Image />
+        <div className="items">
+          <Images />
         </div>
       </Masonry>
+
     </div>
   )
 }
 
-const Image = () => {
 
-  return(
-    <img src={Reference.butternut_squash_risotto.src} alt="fruit tart" />
-  )
-  
-
-}
 
 export default App
