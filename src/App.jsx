@@ -12,7 +12,7 @@ function App() {
   ));
 
   const breakpointCols = {
-    default: 4,
+    default: 2,
     1100: 2,
     700: 1
   }
@@ -38,7 +38,7 @@ const Image = (props) => {
   const { image_name, src } = props.data;
 
   return (
-    <img src={src} alt={image_name} className='image_item'></img>
+    <img src={src} alt={image_name} className='image_item' load="lazy"></img>
   )
 };
 
