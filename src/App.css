@@ -13,7 +13,7 @@ body{
 }
 
 .container{
-    padding: 50px;
+    padding: 80px;
 }
 
 img{
@@ -21,4 +21,12 @@ img{
     object-fit: contain;
     margin-bottom: 30px;
     border: 5px solid #fff;
+    opacity: 0.8;
 }
+
+/* img:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+    cursor: pointer;
+} */
