@@ -12,7 +12,7 @@ function App() {
   ));
 
   const breakpointCols = {
-    default: 4,
+    default: 3,
     1100: 2,
     700: 1
   }
@@ -26,6 +26,7 @@ function App() {
         
       >
         {imageElements}
+
       </Masonry>
 
     </div>
@@ -40,6 +41,10 @@ const Image = (props) => {
   return (
     <div className='item'>
       <img src={src} alt={image_name} className='image_item' load="lazy"></img>
+
+      <div className="message-area">
+        <h3>{image_name}</h3>
+      </div>
     </div>
   )
 };
